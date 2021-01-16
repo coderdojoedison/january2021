@@ -1,0 +1,112 @@
+import turtle
+from turtle import *
+
+t = Turtle()
+screen = turtle.Screen()
+t.color("white")
+screen.setup(775, 525)
+t.speed(0)
+screen.bgcolor("sky blue")
+
+
+
+def draw_circle(color, radius, x, y):
+  t.color(color)
+  t.pensize(1)
+  t.penup()
+  t.fillcolor(color)
+  t.goto(x, y)
+  t.pendown()
+  t.begin_fill()
+  t.circle(radius)
+  t.end_fill()
+  
+  
+  
+def draw_hat():
+  t.penup()
+  t.goto(-35, 95)
+  t.color("black")
+  t.pensize(6)
+  t.pendown()
+  t.goto(35, 95)
+  
+  
+  t.goto(-35, 95)
+  t.fillcolor("black")
+  t.color("black")
+  t.pensize(6)
+  t.pendown()
+  t.begin_fill()
+  t.goto(20, 95)
+  t.left(90)
+  t.forward(20)
+  t.left(90)
+  t.forward(40)
+  t.left(90)
+  t.forward(20)
+  t.end_fill()
+  
+def draw_arms():
+  t.penup()
+  t.color("brown")
+  t.goto(30, -20)
+  t.pendown()
+  t.pensize(4)
+  t.goto(70, -10)
+  t.left(40)
+  t.forward(10)
+  t.backward(10)
+  t.left(62)
+  t.forward(50)
+  t.left(40)
+  t.forward(10)
+  t.backward(10)
+  t.penup()
+  
+  t.goto(-30, -20)
+  t.pendown()
+  t.pensize(4)
+  t.goto(-70, -10)
+  t.right(20)
+  t.forward(15)
+  t.backward(15)
+  t.right(230)
+  t.forward(50)
+  t.right(40)
+  t.forward(10)
+  t.backward(10)
+  
+  
+def draw_smile():
+  t.penup()
+  t.color("pale violet red")
+  t.goto(-25, 40)
+  t.setheading(-50)
+  t.pendown()
+  t.circle(38, 100)
+  t.hideturtle()
+  
+  
+draw_circle("white", 50, 0, 0)
+draw_circle("white", 60, 0, -100)
+draw_circle("white", 80, 0, -220)
+
+draw_hat()
+
+draw_circle("black", 5, -18, 65)
+draw_circle("black", 5, 18, 65)
+
+draw_circle("red", 3, 0, 0)
+draw_circle("red", 3, 0, -10)
+draw_circle("red", 3, 0, -20)
+
+
+
+draw_arms()
+
+draw_smile()
+turtle.mainloop()
+
+
+
